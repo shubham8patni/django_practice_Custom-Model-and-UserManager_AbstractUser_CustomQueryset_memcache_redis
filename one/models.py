@@ -57,6 +57,7 @@ class MyUser(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = [] ## if making a field like "email" as username then remove it from required fields 
     email = models.EmailField(unique=True)
+    username = models.CharField(("username"),max_length=150, unique=False, help_text=("Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."))
     gender = models.CharField(max_length = 10, choices = GENDER_CHOICES, null = False, default = GENDER_CHOICES[2][0])
     birthday = models.DateField(null = True)
 

@@ -8,7 +8,7 @@ class MyUserAdmin(UserAdmin):
     model = MyUser
     list_display = ('email', 'username', 'is_staff', 'is_active')
     fieldsets = (
-        ('User Info', {'fields': ('email', 'password', 'gender')}),
+        ('User Info', {'fields': ('email', 'password', 'gender', 'username')}),
         ('Dates', {'fields': ('birthday', 'last_login', 'date_joined')}),
         ('Permissions', {'fields': ('is_staff', 'is_active')}),
     )
